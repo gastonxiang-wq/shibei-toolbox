@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>颜色转换工具 - HEX、RGB、HSL 在线互转 | 拾贝工具箱</title>
+  <meta name="description" content="免费在线颜色转换工具：支持 HEX、RGB、HSL 互转，带取色器和实时预览，前端配色更省心。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="颜色转换工具 - HEX、RGB、HSL 在线互转 | 拾贝工具箱">
+  <meta property="og:description" content="免费在线颜色转换工具：支持 HEX、RGB、HSL 互转，带取色器和实时预览。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gastonxiang-wq.github.io/shibei-toolbox//seo/color.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://gastonxiang-wq.github.io/shibei-toolbox//seo/color.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="article.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "HEX、RGB、HSL 有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HEX 和 RGB 都描述三原色分量，HSL 用色相、饱和度和亮度描述颜色，调整明暗和饱和度更方便。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "支持带透明度的颜色吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "当前版本支持 RGB 的 alpha 解析，并转换为不含透明度的标准格式；后续可扩展 RGBA/HEXA 输出。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">拾</span>
+      <span class="brand-name">拾贝工具箱</span>
+    </div>
+  </header>
+
+  <main class="article-page">
+    <nav class="breadcrumb"><a href="../index.html">拾贝工具箱</a> / 颜色转换</nav>
+    <article class="article-body">
+      <h1>颜色转换工具</h1>
+      <p class="lede">在 HEX、RGB、HSL 三种格式之间互转，带取色器和色块预览，做网页配色时不用再手算。</p>
+      <a class="cta" href="../index.html#color">立即使用颜色转换</a>
+
+      <h2>怎么用</h2>
+      <ol>
+        <li>用取色器直接选颜色，或输入 <code>#1a73e8</code>、<code>rgb(26,115,232)</code>。</li>
+        <li>点击「转换」即可看到 HEX、RGB、HSL 三个结果。</li>
+        <li>每个结果旁都有复制按钮。</li>
+      </ol>
+
+      <h2>适用场景</h2>
+      <ul>
+        <li>从设计稿取色后转成 CSS 变量。</li>
+        <li>在 HSL 下调整明度，生成同色系深浅色。</li>
+        <li>快速核对两个颜色是否接近。</li>
+      </ul>
+
+      <h2>示例</h2>
+      <pre><code>#1a73e8
+RGB：rgb(26, 115, 232)
+HSL：hsl(214, 82%, 51%)</code></pre>
+
+      <section class="faq">
+        <h2>常见问题</h2>
+        <details>
+          <summary>HEX、RGB、HSL 有什么区别？</summary>
+          <p>HEX 和 RGB 都描述三原色分量，HSL 用色相、饱和度和亮度描述颜色，调整明暗和饱和度更方便。</p>
+        </details>
+        <details>
+          <summary>支持带透明度的颜色吗？</summary>
+          <p>当前版本支持 RGB 的 alpha 解析，并转换为不含透明度的标准格式；后续可扩展 RGBA/HEXA 输出。</p>
+        </details>
+      </section>
+    </article>
+
+    <aside class="related">
+      <a href="timestamp.html">时间戳转换</a>
+      <a href="json.html">JSON 格式化</a>
+      <a href="regex.html">正则测试</a>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>拾贝工具箱 · 免费在线小工具</span>
+  </footer>
+</body>
+</html>

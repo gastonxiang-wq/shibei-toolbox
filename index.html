@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拾贝工具箱 - 免费在线小工具合集</title>
+  <meta name="description" content="拾贝工具箱提供 JSON 格式化、时间戳转换、字数统计、Base64 编解码、正则测试、颜色转换等免费在线工具，无需安装，本地运行。">
+  <meta name="keywords" content="在线工具,JSON格式化,时间戳转换,字数统计,Base64,正则测试,颜色转换">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="拾贝工具箱 - 免费在线小工具合集">
+  <meta property="og:description" content="JSON 格式化、时间戳转换、字数统计、Base64 编解码、正则测试、颜色转换、文本对比等免费在线工具，本地运行不上传。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gastonxiang-wq.github.io/shibei-toolbox//">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "拾贝工具箱",
+    "description": "免费在线小工具合集，包括 JSON 格式化、时间戳转换、字数统计、Base64 编解码、正则测试、颜色转换。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">拾</span>
+      <span class="brand-name">拾贝工具箱</span>
+    </div>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="切换主题" title="切换主题">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+  </header>
+
+  <div class="layout">
+    <nav class="tool-nav" aria-label="工具列表">
+      <button class="tool-tab active" type="button" data-tool="json" aria-controls="panel-json">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/></svg>
+        JSON 格式化
+      </button>
+      <button class="tool-tab" type="button" data-tool="timestamp" aria-controls="panel-timestamp">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        时间戳转换
+      </button>
+      <button class="tool-tab" type="button" data-tool="counter" aria-controls="panel-counter">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5h16v2M9 20h6M12 5v15"/></svg>
+        字数统计
+      </button>
+      <button class="tool-tab" type="button" data-tool="base64" aria-controls="panel-base64">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16"/></svg>
+        Base64 编解码
+      </button>
+      <button class="tool-tab" type="button" data-tool="regex" aria-controls="panel-regex">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="3"/><path d="M12.5 6h9M14 12l7 3M5 18h14M2 12l2-1M5 3v2M5 19v2"/></svg>
+        正则测试
+      </button>
+      <button class="tool-tab" type="button" data-tool="color" aria-controls="panel-color">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        颜色转换
+      </button>
+      <button class="tool-tab" type="button" data-tool="diff" aria-controls="panel-diff">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></svg>
+        文本对比
+      </button>
+      <button class="tool-tab" type="button" data-tool="base" aria-controls="panel-base">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></svg>
+        进制转换
+      </button>
+      <button class="tool-tab" type="button" data-tool="url" aria-controls="panel-url">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        URL 编解码
+      </button>
+    </nav>
+
+    <main class="content">
+      <section class="tool-panel active" id="panel-json" data-panel="json">
+        <div class="panel-head">
+          <h1>JSON 格式化</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="jsonFormat">格式化</button>
+            <button class="btn" type="button" id="jsonMinify">压缩</button>
+            <button class="btn" type="button" id="jsonValidate">校验</button>
+            <button class="btn" type="button" id="jsonCopy">复制结果</button>
+            <button class="btn ghost" type="button" id="jsonClear">清空</button>
+          </div>
+        </div>
+        <div class="editor-grid">
+          <div class="field">
+            <label for="jsonInput">输入</label>
+            <textarea id="jsonInput" spellcheck="false" placeholder='{"name":"拾贝工具箱","tools":["JSON","时间戳"]}'></textarea>
+          </div>
+          <div class="field">
+            <label for="jsonOutput">输出</label>
+            <textarea id="jsonOutput" spellcheck="false" readonly></textarea>
+          </div>
+        </div>
+        <div class="status-line" id="jsonStatus" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel" id="panel-timestamp" data-panel="timestamp" hidden>
+        <div class="panel-head">
+          <h1>时间戳转换</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="tsNow">当前时间戳</button>
+            <button class="btn" type="button" id="tsToDate">时间戳转日期</button>
+            <button class="btn" type="button" id="tsToStamp">日期转时间戳</button>
+            <button class="btn ghost" type="button" id="tsCopy">复制</button>
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="tsInput">时间戳（秒或毫秒）</label>
+            <input id="tsInput" type="text" inputmode="numeric" placeholder="1756454400">
+          </div>
+          <div class="field">
+            <label for="tsMode">单位</label>
+            <select id="tsMode">
+              <option value="auto">自动识别</option>
+              <option value="s">秒</option>
+              <option value="ms">毫秒</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tsDate">日期时间</label>
+            <input id="tsDate" type="datetime-local">
+          </div>
+          <div class="field">
+            <label for="tsTz">时区</label>
+            <select id="tsTz">
+              <option value="local">本地时区</option>
+              <option value="UTC">UTC</option>
+              <option value="Asia/Shanghai" selected>Asia/Shanghai</option>
+            </select>
+          </div>
+        </div>
+        <div class="result-block">
+          <div class="result-row"><span>ISO 8601</span><code id="tsIso">-</code></div>
+          <div class="result-row"><span>本地时间</span><code id="tsLocal">-</code></div>
+          <div class="result-row"><span>秒</span><code id="tsSeconds">-</code></div>
+          <div class="result-row"><span>毫秒</span><code id="tsMillis">-</code></div>
+        </div>
+        <div class="status-line" id="tsStatus" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel" id="panel-counter" data-panel="counter" hidden>
+        <div class="panel-head">
+          <h1>字数统计</h1>
+          <div class="actions">
+            <button class="btn ghost" type="button" id="ctClear">清空</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ctInput">文本</label>
+          <textarea id="ctInput" rows="14" spellcheck="false" placeholder="粘贴需要统计的文本…"></textarea>
+        </div>
+        <div class="stat-grid" id="ctStats">
+          <div class="stat-card"><strong data-stat="chars">0</strong><span>字符数（含空格）</span></div>
+          <div class="stat-card"><strong data-stat="charsNoSpace">0</strong><span>字符数（不含空格）</span></div>
+          <div class="stat-card"><strong data-stat="han">0</strong><span>汉字数</span></div>
+          <div class="stat-card"><strong data-stat="words">0</strong><span>词语数</span></div>
+          <div class="stat-card"><strong data-stat="lines">0</strong><span>行数</span></div>
+          <div class="stat-card"><strong data-stat="paras">0</strong><span>段落数</span></div>
+        </div>
+      </section>
+
+      <section class="tool-panel" id="panel-base64" data-panel="base64" hidden>
+        <div class="panel-head">
+          <h1>Base64 编解码</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="b64Encode">编码</button>
+            <button class="btn" type="button" id="b64Decode">解码</button>
+            <button class="btn" type="button" id="b64Copy">复制</button>
+            <button class="btn ghost" type="button" id="b64Clear">清空</button>
+          </div>
+        </div>
+        <div class="editor-grid">
+          <div class="field">
+            <label for="b64Input">输入</label>
+            <textarea id="b64Input" spellcheck="false" placeholder="输入文本或 Base64 字符串"></textarea>
+          </div>
+          <div class="field">
+            <label for="b64Output">输出</label>
+            <textarea id="b64Output" spellcheck="false" readonly></textarea>
+          </div>
+        </div>
+        <div class="status-line" id="b64Status" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel" id="panel-regex" data-panel="regex" hidden>
+        <div class="panel-head">
+          <h1>正则测试</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="rxTest">测试</button>
+            <button class="btn ghost" type="button" id="rxClear">清空</button>
+          </div>
+        </div>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="rxPattern">正则表达式</label>
+            <input id="rxPattern" type="text" spellcheck="false" placeholder="[a-z]+">
+          </div>
+          <div class="field">
+            <label>标志</label>
+            <div class="flag-row">
+              <label class="check"><input type="checkbox" id="rxG" checked> g</label>
+              <label class="check"><input type="checkbox" id="rxI"> i</label>
+              <label class="check"><input type="checkbox" id="rxM"> m</label>
+              <label class="check"><input type="checkbox" id="rxS"> s</label>
+              <label class="check"><input type="checkbox" id="rxU"> u</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="rxText">测试文本</label>
+          <textarea id="rxText" rows="10" spellcheck="false" placeholder="在此输入测试文本"></textarea>
+        </div>
+        <div class="match-box">
+          <div class="match-summary" id="rxSummary">尚未测试</div>
+          <pre id="rxMatches"></pre>
+        </div>
+      </section>
+
+      <section class="tool-panel" id="panel-color" data-panel="color" hidden>
+        <div class="panel-head">
+          <h1>颜色转换</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="clParse">转换</button>
+            <button class="btn ghost" type="button" id="clRandom">随机颜色</button>
+          </div>
+        </div>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="clPicker">取色器</label>
+            <input id="clPicker" type="color" value="#1a73e8">
+          </div>
+          <div class="field">
+            <label for="clInput">颜色值</label>
+            <input id="clInput" type="text" spellcheck="false" value="#1a73e8" placeholder="#1a73e8 或 rgb(26,115,232)">
+          </div>
+        </div>
+        <div class="swatch-row">
+          <div class="swatch" id="clSwatch" style="background:#1a73e8"></div>
+          <div class="result-block grow">
+            <div class="result-row"><span>HEX</span><code id="clHex">#1a73e8</code><button class="copy-mini" data-copy="clHex" type="button" aria-label="复制 HEX">复制</button></div>
+            <div class="result-row"><span>RGB</span><code id="clRgb">rgb(26, 115, 232)</code><button class="copy-mini" data-copy="clRgb" type="button" aria-label="复制 RGB">复制</button></div>
+            <div class="result-row"><span>HSL</span><code id="clHsl">hsl(214, 82%, 51%)</code><button class="copy-mini" data-copy="clHsl" type="button" aria-label="复制 HSL">复制</button></div>
+          </div>
+        </div>
+        <div class="status-line" id="clStatus" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel" id="panel-diff" data-panel="diff" hidden>
+        <div class="panel-head">
+          <h1>文本对比</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="dfRun">开始对比</button>
+            <button class="btn" type="button" id="dfCopy">复制结果</button>
+            <button class="btn ghost" type="button" id="dfClear">清空</button>
+          </div>
+        </div>
+        <div class="editor-grid">
+          <div class="field">
+            <label for="dfA">原文本</label>
+            <textarea id="dfA" spellcheck="false" placeholder="粘贴原文本"></textarea>
+          </div>
+          <div class="field">
+            <label for="dfB">对比文本</label>
+            <textarea id="dfB" spellcheck="false" placeholder="粘贴要对比的文本"></textarea>
+          </div>
+        </div>
+        <div class="match-box">
+          <div class="match-summary" id="dfSummary">尚未对比</div>
+          <pre class="diff-output" id="dfOutput"></pre>
+        </div>
+      </section>
+
+      <section class="tool-panel" id="panel-base" data-panel="base" hidden>
+        <div class="panel-head">
+          <h1>进制转换</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="bnRun">转换</button>
+            <button class="btn" type="button" id="bnCopy">复制全部</button>
+            <button class="btn ghost" type="button" id="bnClear">清空</button>
+          </div>
+        </div>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="bnInput">数值</label>
+            <input id="bnInput" type="text" spellcheck="false" placeholder="255 或 FF 或 11111111">
+          </div>
+          <div class="field">
+            <label for="bnFrom">输入进制</label>
+            <select id="bnFrom">
+              <option value="2">二进制</option>
+              <option value="8">八进制</option>
+              <option value="10" selected>十进制</option>
+              <option value="16">十六进制</option>
+            </select>
+          </div>
+        </div>
+        <div class="result-block">
+          <div class="result-row"><span>十进制</span><code id="bnDec">-</code><button class="copy-mini" data-copy="bnDec" type="button" aria-label="复制十进制">复制</button></div>
+          <div class="result-row"><span>十六进制</span><code id="bnHex">-</code><button class="copy-mini" data-copy="bnHex" type="button" aria-label="复制十六进制">复制</button></div>
+          <div class="result-row"><span>八进制</span><code id="bnOct">-</code><button class="copy-mini" data-copy="bnOct" type="button" aria-label="复制八进制">复制</button></div>
+          <div class="result-row"><span>二进制</span><code id="bnBin">-</code><button class="copy-mini" data-copy="bnBin" type="button" aria-label="复制二进制">复制</button></div>
+        </div>
+        <div class="status-line" id="bnStatus" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel" id="panel-url" data-panel="url" hidden>
+        <div class="panel-head">
+          <h1>URL 编解码</h1>
+          <div class="actions">
+            <button class="btn primary" type="button" id="urEncode">编码</button>
+            <button class="btn" type="button" id="urDecode">解码</button>
+            <button class="btn" type="button" id="urCopy">复制结果</button>
+            <button class="btn ghost" type="button" id="urClear">清空</button>
+          </div>
+        </div>
+        <div class="editor-grid">
+          <div class="field">
+            <label for="urInput">输入</label>
+            <textarea id="urInput" spellcheck="false" placeholder="输入需要编码或解码的文本"></textarea>
+          </div>
+          <div class="field">
+            <label for="urOutput">输出</label>
+            <textarea id="urOutput" spellcheck="false" readonly></textarea>
+          </div>
+        </div>
+        <div class="status-line" id="urStatus" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>拾贝工具箱 · 本地运行，不上传任何数据</span>
+    <nav class="footer-nav" aria-label="工具指南">
+      <a href="seo/json.html">JSON 指南</a>
+      <a href="seo/timestamp.html">时间戳指南</a>
+      <a href="seo/word-counter.html">字数指南</a>
+      <a href="seo/base64.html">Base64 指南</a>
+      <a href="seo/regex.html">正则指南</a>
+      <a href="seo/color.html">颜色指南</a>
+      <a href="seo/diff.html">文本对比指南</a>
+      <a href="seo/base-convert.html">进制转换指南</a>
+      <a href="seo/url-encode.html">URL 编码指南</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+    <span class="footer-actions">
+      <button class="btn ghost" id="donateBtn" type="button">支持一下</button>
+      <span class="ad-slot">广告位预留</span>
+    </span>
+  </footer>
+
+  <div class="modal" id="donateModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="donateTitle">
+      <button class="icon-button modal-close" id="donateClose" type="button" aria-label="关闭">×</button>
+      <h2 id="donateTitle">支持拾贝工具箱</h2>
+      <p>如果你觉得工具好用，可以扫码支持。</p>
+      <img class="qr-img" src="assets/donate.jpg" alt="收款码">
+      <span class="modal-note">扫码支持拾贝工具箱</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

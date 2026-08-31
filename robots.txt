@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gastonxiang-wq.github.io/shibei-toolbox//sitemap.xml

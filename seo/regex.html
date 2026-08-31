@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正则表达式测试工具 - 在线匹配与调试 | 拾贝工具箱</title>
+  <meta name="description" content="免费在线正则测试工具：支持 g/i/m/s/u 标志，实时列出全部匹配位置和分组，快速调试正则表达式。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="正则表达式测试工具 - 在线匹配与调试 | 拾贝工具箱">
+  <meta property="og:description" content="免费在线正则测试工具：支持 g/i/m/s/u 标志，实时列出全部匹配位置和分组。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gastonxiang-wq.github.io/shibei-toolbox//seo/regex.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://gastonxiang-wq.github.io/shibei-toolbox//seo/regex.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="article.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "为什么我写的正则匹配不到？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "常见原因是忘记转义特殊字符、大小写不一致，或没有勾选多行/忽略大小写标志。可以先用简单文本逐步验证。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "支持哪些正则标志？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "支持 g 全局、i 忽略大小写、m 多行、s 点号匹配换行、u Unicode 模式。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">拾</span>
+      <span class="brand-name">拾贝工具箱</span>
+    </div>
+  </header>
+
+  <main class="article-page">
+    <nav class="breadcrumb"><a href="../index.html">拾贝工具箱</a> / 正则测试</nav>
+    <article class="article-body">
+      <h1>正则表达式测试工具</h1>
+      <p class="lede">输入正则和测试文本，一次看全部匹配的位置、内容和分组，适合边写边调。</p>
+      <a class="cta" href="../index.html#regex">立即使用正则测试</a>
+
+      <h2>怎么用</h2>
+      <ol>
+        <li>在「正则表达式」输入框写入模式，例如 <code>\d+</code>。</li>
+        <li>勾选需要的标志：g 全局、i 忽略大小写、m 多行、s 匹配换行、u Unicode。</li>
+        <li>粘贴测试文本后点击「测试」，结果会列出每一处匹配。</li>
+      </ol>
+
+      <h2>调试技巧</h2>
+      <ul>
+        <li>先不勾 g，确认单次匹配正确后再开启全局。</li>
+        <li>匹配中文时勾选 u，避免处理生僻字出错。</li>
+        <li>用分组 <code>()</code> 提取电话号码、邮箱等片段。</li>
+      </ul>
+
+      <h2>示例</h2>
+      <pre><code>模式：\d+
+文本：abc 123 def 456
+结果：2 处匹配（123、456）</code></pre>
+
+      <section class="faq">
+        <h2>常见问题</h2>
+        <details>
+          <summary>为什么我写的正则匹配不到？</summary>
+          <p>常见原因是忘记转义特殊字符、大小写不一致，或没有勾选多行/忽略大小写标志。可以先用简单文本逐步验证。</p>
+        </details>
+        <details>
+          <summary>支持哪些正则标志？</summary>
+          <p>支持 g 全局、i 忽略大小写、m 多行、s 点号匹配换行、u Unicode 模式。</p>
+        </details>
+      </section>
+    </article>
+
+    <aside class="related">
+      <a href="json.html">JSON 格式化</a>
+      <a href="base64.html">Base64 编解码</a>
+      <a href="word-counter.html">字数统计</a>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>拾贝工具箱 · 免费在线小工具</span>
+  </footer>
+</body>
+</html>
